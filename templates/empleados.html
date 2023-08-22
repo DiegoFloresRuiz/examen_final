@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/guardar" method="post">
+
+        <input type="text" name="nombre" placeholder="nombre">
+        <input type="text" name="app" placeholder="paterno">
+        <input type="text" name="apm" placeholder="materno">
+        <input type="text" name="cargo" placeholder="cargo">
+        
+
+        <button type="submit">Guargar </button>
+        <a href="{{url_for('index')}}"><button>principal</button></a>
+    </form>
+    <br>
+    <br>
+    <table border="5">
+        <thead>
+          <tr>
+              <td>Id:</td>
+              <td>nombre:</td>
+              <td>Appelido Paterno:</td>
+              <td>Apellido Materno:</td>
+              <td>Cargo:</td>
+            </tr>
+          </thead>
+        
+          <tbody>
+            {%for empleados in empleados %}
+            <tr>
+            <td>{{ empleados.0 }}</td>
+            <td>{{ empleados.1 }}</td>
+            <td>{{ empleados.2 }}</td>
+            <td>{{ empleados.3 }}</td>
+            <td>{{ empleados.4 }}</td>
+  
+             
+            </td>
+             
+            </td>
+            </tr>
+        
+            {%endfor%}
+          </tbody>
+        
+    </table>
+    
+</body>
+</html>

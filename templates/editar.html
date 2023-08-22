@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/actualizarr" method="post">
+
+        <input type="text" name="nombre" placeholder="nombre">
+        <input type="text" name="clas" placeholder="clasificacion">
+        <input type="text" name="canti" placeholder="cantidad">
+        <input type="text" name="pres" placeholder="precio">
+        
+
+        <button type="submit">editar</button>
+        <a href="{{url_for('index')}}"><button>principal</button></a>
+        
+        
+
+    </form>
+</body>
+</html>

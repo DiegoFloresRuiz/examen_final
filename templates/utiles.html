@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/guardaru" method="post">
+
+        <input type="text" name="nombre" placeholder="nombre">
+        <input type="text" name="clas" placeholder="clasifiacacion">
+        <input type="text" name="canti" placeholder="cantidad">
+        <input type="text" name="pres" placeholder="precio">
+        
+
+        <button type="submit">Guargar </button>
+        <a href="{{url_for('index')}}"><button>principal</button></a>
+        <a href="{{url_for('actulaizar')}}"></a><button>actulaizar</button>
+        
+
+    </form>
+    <br>
+    <br>
+    <table border="5">
+        <thead>
+          <tr>
+              <td>Id:</td>
+              <td>nombre:</td>
+              <td>categoria:</td>
+              <td>cantidad:</td>
+              <td>precio:</td>
+            </tr>
+          </thead>
+        
+          <tbody>
+            {%for utiles in utiles %}
+            <tr>
+            <td>{{ utiles.0 }}</td>
+            <td>{{ utiles.1 }}</td>
+            <td>{{ utiles.2 }}</td>
+            <td>{{ utiles.3 }}</td>
+            <td>{{ utiles.4 }}</td>
+            
+  
+             
+            </td>
+             
+            </td>
+            </tr>
+        
+            {%endfor%}
+          </tbody>
+        
+    </table>
+</body>
+</html>
